@@ -1,4 +1,4 @@
-baseurl: https://econ.rlabuonora.com/
+baseurl: https://r4ds-sports.netlify.app/
 languageCode: en-us
 title: R for Data Science With Sports Applications
 theme: "hugo-lithium"
