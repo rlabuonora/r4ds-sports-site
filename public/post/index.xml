@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on R for Data Science With Sports Applications</title>
+    <link>https://econ.rlabuonora.com/post/</link>
+    <description>Recent content in Posts on R for Data Science With Sports Applications</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://econ.rlabuonora.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Session 1</title>
+      <link>https://econ.rlabuonora.com/2023/09/20/session1/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://econ.rlabuonora.com/2023/09/20/session1/</guid>
+      <description>  .twitter-tweet { margin-left: auto; margin-right: auto; } blockquote { margin-top: 3em; background: hsl(0deg 0% 90%); padding: 16px 20px; border-radius: 8px; font-style: italic; } blockquote p::before { content: &#39;“&#39;; } blockquote p::after { content: &#39;”&#39;; }   fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab 1 Materials for Lab 1.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

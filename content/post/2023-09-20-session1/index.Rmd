@@ -1,0 +1,72 @@
+---
+title: "Session 1"
+author: ''
+date: '2023-09-20'
+slug: session1
+categories: []
+tags: []
+---
+
+
+
+```{r setup, include = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  fig.height=4, 
+  fig.width=6, 
+  warning=FALSE, 
+  message = FALSE,
+  dev = "png", 
+  dev.args = list(type = "cairo-png"))
+
+library(tidyverse)
+library(kableExtra)
+
+options(kableExtra.html.bsTable = TRUE)
+
+theme_set(theme_minimal() + 
+            theme(plot.title = element_text(hjust = 0.5)))
+
+celeste <- "#5e81ac"
+
+```
+
+```{css, echo=FALSE}
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+blockquote {
+  margin-top: 3em;
+  background: hsl(0deg 0% 90%);
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+blockquote p::before {
+    content: '“';
+  }
+
+blockquote p::after {
+    content: '”';
+  }
+```
+
+
+```{r}
+xaringanExtra::embed_xaringan(
+  url = "https://r4ds-sports-sesson1.netlify.app/",
+  ratio = "16:9"
+)
+```
+
+
+## Lab 1
+
+Materials for Lab 1:
+
+- [Box Score Data Frame](./box.rds)
+- [Playoff Data Frame](./add.rds)
+- [R Script](./lab1.R)
