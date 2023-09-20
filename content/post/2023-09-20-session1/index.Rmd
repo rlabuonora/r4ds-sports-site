@@ -69,3 +69,4 @@ Materials for Lab 1:
 - [Box Score Data Frame](./box.rds)
 - [Playoff Data Frame](./add.rds)
 - [R Script](./lab1.R)
+- [Result](./playoff.html)

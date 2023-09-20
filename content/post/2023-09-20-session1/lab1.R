@@ -7,18 +7,18 @@ library(kableExtra)
 box <- readRDS('./box.rds')
 add <- readRDS('./add.rds')
 
-t <- box %>% 
-  left_join(add, by="Team")
+t <- left_join(box, add, by="Team")
 
-table <- t %>% 
-  group_by(Playoff) %>% 
-  summarize(Steals=mean(STL), 
+df_grouped <- group_by(t, Playoff)
+
+tbl <- summarize(df_grouped,
+            Steals=mean(STL), 
             Points=mean(PTS), 
             Blocks=mean(BLK), 
             Assists=mean(AST), 
             Rebounds=mean(REB))
 
 
-kable(table, "html") %>%
-  kable_styling(bootstrap_options = c("striped", "hover")) %>%
-  cat(., file = "playoff.html")
+simple_table <- kable(tbl, "html")
+styled_table <- kable_styling(simple_table, bootstrap_options = c("striped", "hover"))
+cat(styled_table, file = "playoff.html")
