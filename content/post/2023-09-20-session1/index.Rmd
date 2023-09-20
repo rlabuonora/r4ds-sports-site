@@ -57,8 +57,7 @@ blockquote p::after {
 
 ```{r}
 xaringanExtra::embed_xaringan(
-  url = "https://r4ds-sports-sesson1.netlify.app/",
-  ratio = "16:9"
+  url = "https://r4ds-sports-sesson1.netlify.app/"
 )
 ```
 
