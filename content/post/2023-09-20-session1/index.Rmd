@@ -66,26 +66,14 @@ xaringanExtra::embed_xaringan(
 
 Download [this R script](./lab1.R), the [Box Score Data Frame](./box.rds) and the [Playoff Data Frame](./add.rds)
 
-The script does the following:
+The script opens two rds files with data from NBA teams, merges on the `Team` column and calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not. Finally, it creates an `html` table with the results.
 
-- Opens two rds files with data from NBA teams.
+### Your job:
 
-- Merges on the `Team` column.
+1) Open the script file in RStudio and run it. Make sure that it works correctly. Do Playoff teams have more points on average?
 
-- Calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not.
+2) What functions does it use? What objects does it create?
 
-- Creates an `html` table with the results.
+3) Can you identify which tasks each function supports (import, wrangling, model, communication)?
 
-Your job:
-
-- Open the script file in RStudio and run it. Make sure that it works correctly. Do Playoff teams have more points on average?
-
-- What functions does it use?
-
-- Can you identify which tasks each function supports (import, wrangling, model, communication)?
-
-- What objects does it create?
-
-- How many rows does the `df` data frame have?
-
-- Which are the columns?
+5) How many rows does the `df` data frame have? Which are the columns? Use the `str` function to print information in the console.
