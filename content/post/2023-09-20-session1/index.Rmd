@@ -64,9 +64,28 @@ xaringanExtra::embed_xaringan(
 
 ## Lab 1
 
-Materials for Lab 1:
+Download [this R script](./lab1.R), the [Box Score Data Frame](./box.rds) and the [Playoff Data Frame](./add.rds)
 
-- [Box Score Data Frame](./box.rds)
-- [Playoff Data Frame](./add.rds)
-- [R Script](./lab1.R)
-- [Result](./playoff.html)
+The script does the following:
+
+- Opens two rds files with data from NBA teams.
+
+- Merges on the `Team` column.
+
+- Calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not.
+
+- Creates an `html` table with the results.
+
+Your job:
+
+- Open the script file in RStudio and run it. Make sure that it works correctly. Do Playoff teams have more points on average?
+
+- What functions does it use?
+
+- Can you identify which tasks each function supports (import, wrangling, model, communication)?
+
+- What objects does it create?
+
+- How many rows does the `df` data frame have?
+
+- Which are the columns?
