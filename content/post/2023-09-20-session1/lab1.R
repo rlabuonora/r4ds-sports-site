@@ -7,7 +7,7 @@ library(kableExtra)
 box <- readRDS('./box.rds')
 add <- readRDS('./add.rds')
 
-t <- left_join(box, add, by="Team")
+df <- left_join(box, add, by="Team")
 
 df_grouped <- group_by(t, Playoff)
 
