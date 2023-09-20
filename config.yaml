@@ -14,8 +14,8 @@ permalinks:
   post: /:year/:month/:day/:slug/
 menu:
   main:
-    - name: Sobre
-      url: /sobre/
+    - name: About
+      url: /about/
       weight: 1
     - name: GitHub
       url: https://github.com/rlabuonora
