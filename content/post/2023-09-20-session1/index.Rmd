@@ -57,16 +57,16 @@ blockquote p::after {
 
 ```{r}
 xaringanExtra::embed_xaringan(
-  url = "https://r4ds-sports-sesson1.netlify.app/"
+  url = "https://r4ds-sports-session1.netlify.app/"
 )
 ```
 
 
 ## Lab 1
 
-Download [this R script](./lab1.R), the [Box Score Data Frame](./box.rds) and the [Playoff Data Frame](./add.rds)
+Download [this R script](./lab1.R), the [Box Score Data Frame](./box.rds) and the [Playoff Data Frame](./add.rds).
 
-The script opens two rds files with data from NBA teams, merges on the `Team` column and calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not. Finally, it creates an `html` table with the results.
+The script opens the two rds files with data from NBA teams, merges on the `Team` column and calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not. Finally, it creates an `html` table with the results.
 
 ### Your job:
 
