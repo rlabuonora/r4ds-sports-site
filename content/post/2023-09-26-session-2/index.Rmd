@@ -7,6 +7,30 @@ categories: []
 tags: []
 ---
 
+
+```{r setup, include = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  fig.height=4, 
+  fig.width=6, 
+  warning=FALSE, 
+  message = FALSE,
+  dev = "png", 
+  dev.args = list(type = "cairo-png"))
+
+library(tidyverse)
+library(kableExtra)
+
+options(kableExtra.html.bsTable = TRUE)
+
+theme_set(theme_minimal() + 
+            theme(plot.title = element_text(hjust = 0.5)))
+
+celeste <- "#5e81ac"
+
+```
+
+
 ```{r}
 xaringanExtra::embed_xaringan(
   url = "https://r4ds-sports-session2.netlify.app/"
