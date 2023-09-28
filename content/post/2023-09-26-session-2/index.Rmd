@@ -48,17 +48,3 @@ Download [this dataset](./rushing.rds). It has rushing stats from the 2019 NFL r
 - Create a new `data.frame` with a new column, `rush_attempts_per_game`. Use the formula `rush_att/games_played`.
 - Create a new `data.frame` with only the following columns: `name`, `team`, and `rush_attempts_per_game`.
 
-
-<!-- Download [this R data file](./nba.rds) and create a plot to understand the relationship between assits and turnovers in the 82 games of the 2017/2018 regular season. -->
-
-
-<!-- ### Your job: -->
-
-<!-- 1) Think about the data object. What kind of object if is? Use `glimpse` to find out how many variables and observations the object contains. -->
-
-<!-- 2) Think about the aesthetic mappings you want to create. How would you show how the `Playoff` variable affects that relationship? -->
-
-<!-- 3) Think about the geoms you are going to use to represent your data. -->
-
-<!-- 4) Create the same plot to understand the relationship between made 2-pointers and made 3-pointers. -->
-
