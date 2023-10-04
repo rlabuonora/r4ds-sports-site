@@ -38,7 +38,9 @@ xaringanExtra::embed_xaringan(
 ```
 
 
-## Lab 2
+# Lab 2
+
+## Exercise 1
 
 Download [this dataset](./rushing.rds). It has rushing stats from the 2019 NFL regular season.
 
@@ -48,3 +50,12 @@ Download [this dataset](./rushing.rds). It has rushing stats from the 2019 NFL r
 - Create a new `data.frame` with a new column, `rush_attempts_per_game`. Use the formula `rush_att/games_played`.
 - Create a new `data.frame` with only the following columns: `name`, `team`, and `rush_attempts_per_game`.
 
+## Exercise 2
+
+
+Use the [NBA dataset](./nba.rds) to answer the following questions:
+
+- How many teams are in each conference?
+- What is the team with more wins in the `Atlantic` division? Create a `data.frame` with one row with the `Team` and `W` columns.
+- What is the team with more 3 point attempts in the Western conference?
+- What is the team with least turn overs in the league?

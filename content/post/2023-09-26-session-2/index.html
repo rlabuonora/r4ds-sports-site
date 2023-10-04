@@ -14,8 +14,10 @@ tags: []
 <iframe src="https://r4ds-sports-session2.netlify.app/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
-<div id="lab-2" class="section level2">
-<h2>Lab 2</h2>
+<div id="lab-2" class="section level1">
+<h1>Lab 2</h1>
+<div id="exercise-1" class="section level2">
+<h2>Exercise 1</h2>
 <p>Download <a href="./rushing.rds">this dataset</a>. It has rushing stats from the 2019 NFL regular season.</p>
 <div id="your-job" class="section level3">
 <h3>Your job:</h3>
@@ -24,11 +26,16 @@ tags: []
 <li>Create a new <code>data.frame</code> with a new column, <code>rush_attempts_per_game</code>. Use the formula <code>rush_att/games_played</code>.</li>
 <li>Create a new <code>data.frame</code> with only the following columns: <code>name</code>, <code>team</code>, and <code>rush_attempts_per_game</code>.</li>
 </ul>
-<!-- Download [this R data file](./nba.rds) and create a plot to understand the relationship between assits and turnovers in the 82 games of the 2017/2018 regular season. -->
-<!-- ### Your job: -->
-<!-- 1) Think about the data object. What kind of object if is? Use `glimpse` to find out how many variables and observations the object contains. -->
-<!-- 2) Think about the aesthetic mappings you want to create. How would you show how the `Playoff` variable affects that relationship? -->
-<!-- 3) Think about the geoms you are going to use to represent your data. -->
-<!-- 4) Create the same plot to understand the relationship between made 2-pointers and made 3-pointers. -->
+</div>
+</div>
+<div id="exercise-2" class="section level2">
+<h2>Exercise 2</h2>
+<p>Use the <a href="./nba.rds">NBA dataset</a> to answer the following questions:</p>
+<ul>
+<li>How many teams are in each conference?</li>
+<li>What is the team with more wins in the <code>Atlantic</code> division? Create a <code>data.frame</code> with one row with the <code>Team</code> and <code>W</code> columns.</li>
+<li>What is the team with more 3 point attempts in the Western conference?</li>
+<li>What is the team with least turn overs in the league?</li>
+</ul>
 </div>
 </div>
