@@ -43,4 +43,6 @@ xaringanExtra::embed_xaringan(
 
 ## Exercise 1
 
-Use [the rushing dataset](./rushing.rds) to compare the number of rushing attempts for players in different positions. Create a project and a script that prints a table to the console with the average numbers of attempts per game.
+Use [the rushing dataset](./rushing.rds) to compare the number of rushing attempts for players in different positions. Create a column called `rushing_attempts_average` and calculate the mean grouping by position.
+
+Create a _project_ with a _script_ called `attempts.R` that prints a table to the console with the average numbers of attempts per game.
