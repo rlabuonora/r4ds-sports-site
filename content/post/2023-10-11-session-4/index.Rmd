@@ -1,0 +1,20 @@
+---
+title: Session 4
+author: R package build
+date: '2023-10-11'
+slug: session-4
+categories: []
+tags: []
+---
+# Lab 3
+
+```{r}
+xaringanExtra::embed_xaringan(
+  url = "https://r4ds-sports-session4.netlify.app/"
+)
+```
+
+
+## Exercise 1
+
+Use [the rushing dataset](./rushing.rds) to compare the number of rushing attempts for players in different positions. Create a project and a script that prints a table to the console with the average numbers of attempts per game.
