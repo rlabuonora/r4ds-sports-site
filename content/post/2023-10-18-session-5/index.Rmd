@@ -1,11 +1,12 @@
 ---
-title: Session 4
+title: Session 5
 author: R package build
-date: '2023-10-11'
-slug: session-4
+date: '2023-10-18'
+slug: session-5
 categories: []
 tags: []
 ---
+
 
 
 
@@ -33,16 +34,9 @@ celeste <- "#5e81ac"
 
 
 
-
 ```{r}
 xaringanExtra::embed_xaringan(
-  url = "https://r4ds-sports-session4.netlify.app/"
+  url = "https://r4ds-sports-session5.netlify.app/"
 )
 ```
 
-
-## Lab 3
-
-Use [the rushing dataset](./rushing.rds) to compare the number of rushing attempts for players in different positions. Create a column called `rushing_attempts_average` and calculate the mean grouping by position.
-
-Create a _project_ with a _script_ called `attempts.R` that prints a table to the console with the average numbers of attempts per game.
