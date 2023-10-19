@@ -43,7 +43,7 @@ xaringanExtra::embed_xaringan(
 
 ## Lab
 
-2) Rewrite [this R from session 1](./lab1.R) to use the pipe operator.
+2) Rewrite [this R script from session 1](./script.R) to use the pipe operator.
 
 
 1) Create an Rmarkdown with the following code:
