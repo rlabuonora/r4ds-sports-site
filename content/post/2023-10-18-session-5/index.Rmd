@@ -43,4 +43,16 @@ xaringanExtra::embed_xaringan(
 
 ## Lab
 
-Rewrite [this R from session 1](./lab1.R) to use the pipe operator.
+2) Rewrite [this R from session 1](./lab1.R) to use the pipe operator.
+
+
+1) Create an Rmarkdown with the following code:
+
+```{r eval=FALSE}
+
+library(trackeR)
+runZones <- zones(runs[1:4], what = "speed", breaks = c(0, 2:6, 12.5))
+plot(runZones)
+
+```
+
