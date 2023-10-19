@@ -48,7 +48,7 @@ xaringanExtra::embed_xaringan(
 
 1) Create an Rmarkdown with the following code:
 
-```{r eval=FALSE}
+```{r eval=FALSE, echo=TRUE}
 
 library(trackeR)
 runZones <- zones(runs[1:4], what = "speed", breaks = c(0, 2:6, 12.5))
