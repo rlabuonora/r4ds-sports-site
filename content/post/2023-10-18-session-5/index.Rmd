@@ -40,3 +40,7 @@ xaringanExtra::embed_xaringan(
 )
 ```
 
+
+## Lab
+
+Rewrite [this R from session 1](./lab1.R) to use the pipe operator.
