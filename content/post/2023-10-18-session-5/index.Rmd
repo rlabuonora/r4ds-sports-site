@@ -46,7 +46,7 @@ xaringanExtra::embed_xaringan(
 2) Rewrite [this R script from session 1](./script.R) to use the pipe operator.
 
 
-1) Create an Rmarkdown with the following code:
+1) Create an Rmarkdown with the following code. Knit it to create a word document.
 
 ```{r eval=FALSE, echo=TRUE}
 
