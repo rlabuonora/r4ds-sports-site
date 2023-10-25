@@ -43,20 +43,14 @@ xaringanExtra::embed_xaringan(
 
 ## Lab
 
-2) Rewrite [this R script from session 1](./script.R) to use the pipe operator.
+1) Rewrite [this R script from session 1](./script.R) to use the pipe operator.
 
+2) Possesions are calculated with this equation (Kubatko 2007):
 
-1) Create an Rmarkdown and insert the following code into an R code chunk. Knit it to create a word document. 
+$$POSS = P2A + P3A + 0.44 \times FTA - OREB + TOV$$
 
-```{r eval=FALSE, echo=TRUE}
-# Load packages
-library(trackeR)
+Use the [box.rds](./box.rds) to calculate the POSS factor for each team and list the 3 teams with higher possesion values in each conference. Create a version creating intermediate variables in each step and another version using the ` %>% `. Compare both approaches. 
 
-# Import built-in data
-runZones <- zones(runs[1:4], what = "speed", breaks = c(0, 2:6, 12.5))
+3) Create an Rmarkdown document. The document should open [add.rds](./add.rds) and [box.rds](./box.rds). Join the two files by the `team` variable and create one table per conference with the teams that made the playoffs. The final document should look like [this](./solution.docx)
 
-# Create plot
-plot(runZones)
-
-```
 
