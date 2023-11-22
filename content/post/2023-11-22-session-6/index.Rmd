@@ -40,6 +40,6 @@ xaringanExtra::embed_xaringan(
 
 ## Lab
 
-1) Use [this dataset](./pbox_long) to create a bar chart with the number of minutes each player of the Houston Rockets played during the regular season. Put the name of each player in the y-axis and order them by the amount of minutes played.
+1) Use [this dataset](./pbox_long.rds) to create a bar chart with the number of minutes each player of the Houston Rockets played during the regular season. Put the name of each player in the y-axis and order them by the amount of minutes played.
 
 2) User [this dataset](./ff.rds) to create a scatter plot of Offensive Pace vs. Defensive Pace for the Boston Celtics, Cleveland Cavaliers, Golden State Warriors and the Houston Rockets. 
