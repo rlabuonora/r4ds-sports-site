@@ -42,4 +42,21 @@ xaringanExtra::embed_xaringan(
 
 1) Use [this dataset](./pbox_long.rds) to create a bar chart with the number of minutes each player of the Houston Rockets played during the regular season. Put the name of each player in the y-axis and order them by the amount of minutes played.
 
-2) User [this dataset](./ff.rds) to create a scatter plot of Offensive Pace vs. Defensive Pace for the Boston Celtics, Cleveland Cavaliers, Golden State Warriors and the Houston Rockets. 
+2) Use [this dataset](./ff.rds) to create a scatter plot of Offensive Pace vs. Defensive Pace for the Boston Celtics, Cleveland Cavaliers, Golden State Warriors and the Houston Rockets. 
+
+3) Use [this dataset](./run.rds) to recreate this plot using `theme_minimal()`:
+```{r echo=FALSE}
+library(ggplot2)
+
+run <- readRDS('./run.rds')
+
+run %>% 
+  ggplot(aes(x=time, y=heart_rate)) +
+  geom_line() +
+  theme_minimal()+
+  labs(x='Time', y="Heart Rate (BPM)")
+
+```
+
+
+
