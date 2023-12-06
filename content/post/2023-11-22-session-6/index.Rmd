@@ -61,22 +61,3 @@ run %>%
 
 4) Use [this dataset](./runs_long.rds) to create a plot that compares the evolution of athletes `heart_rate` accross different training sessions. Each training session is identified by the `idx` column. Remember to set different scales with the `scales="free"` argument to `facet_wrap`.
 
-
-
-```{r echo=FALSE}
-library(ggplot2)
-
-run <- readRDS('./run.rds')
-
-run %>% 
-  ggplot(aes(x=time, y=heart_rate)) +
-  geom_line() +
-  theme_minimal()+
-  labs(x='Time', y="Heart Rate (BPM)")
-
-```
-
-
-
-
-
