@@ -1,0 +1,43 @@
+---
+title: Session 7
+author: R package build
+date: '2023-12-14'
+slug: session-7
+categories: []
+tags: []
+---
+
+
+```{r setup, include = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  fig.height=4, 
+  fig.width=6, 
+  warning=FALSE, 
+  message = FALSE,
+  dev = "png", 
+  dev.args = list(type = "cairo-png"))
+
+library(tidyverse)
+library(kableExtra)
+
+options(kableExtra.html.bsTable = TRUE)
+
+theme_set(theme_minimal() + 
+            theme(plot.title = element_text(hjust = 0.5)))
+
+celeste <- "#5e81ac"
+
+```
+
+```{r}
+xaringanExtra::embed_xaringan(
+  url = "https://r4ds-sports-session7.netlify.app/"
+)
+```
+
+
+## Lab
+
+1) Use [this dataset](./win_probs.rds) to create an Rmarkdown document that analyzes the win probilities for each team during the course of the game. Create a plot and include it in the file (either by inserting the `ggplot` code in an R chunk or by importing the image directly.
+Use bold type to explain football concepts, bullet points to explain the main takeaways of the plot. Also add a label caption to credit the data source (`espnscrapeR` package) to the plot.
