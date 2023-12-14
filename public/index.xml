@@ -2,28 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R for Data Science With Sports Applications</title>
-    <link>https://econ.rlabuonora.com/</link>
+    <link>https://r4ds-sports.netlify.app/</link>
     <description>Recent content on R for Data Science With Sports Applications</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://econ.rlabuonora.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://r4ds-sports.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Session 1</title>
-      <link>https://econ.rlabuonora.com/2023/09/20/session1/</link>
-      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      <title>Session 7</title>
+      <link>https://r4ds-sports.netlify.app/2023/12/14/session-7/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://econ.rlabuonora.com/2023/09/20/session1/</guid>
-      <description>  .twitter-tweet { margin-left: auto; margin-right: auto; } blockquote { margin-top: 3em; background: hsl(0deg 0% 90%); padding: 16px 20px; border-radius: 8px; font-style: italic; } blockquote p::before { content: &#39;“&#39;; } blockquote p::after { content: &#39;”&#39;; }   fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab 1 Materials for Lab 1.
+      <guid>https://r4ds-sports.netlify.app/2023/12/14/session-7/</guid>
+      <description>fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab Use this dataset to create an Rmarkdown document that analyzes the win probilities for each team during the course of the game. Create a plot and include it in the file (either by inserting the ggplot code in an R chunk or by importing the image directly. Use bold type to explain football concepts, bullet points to explain the main takeaways of the plot.</description>
+    </item>
+    
+    <item>
+      <title>Session 6</title>
+      <link>https://r4ds-sports.netlify.app/2023/11/22/session-6/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/11/22/session-6/</guid>
+      <description>fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab Use this dataset to create a bar chart with the number of minutes each player of the Houston Rockets played during the regular season. Put the name of each player in the y-axis and order them by the amount of minutes played.
+ Use this dataset to create a scatter plot of Offensive Pace vs. Defensive Pace for the Boston Celtics, Cleveland Cavaliers, Golden State Warriors and the Houston Rockets.</description>
+    </item>
+    
+    <item>
+      <title>Session 5</title>
+      <link>https://r4ds-sports.netlify.app/2023/10/18/session-5/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/10/18/session-5/</guid>
+      <description>fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab Rewrite this R script from session 1 to use the pipe operator.
+ Possesions are calculated with this equation (Kubatko 2007):
+  \[POSS = P2A + P3A + 0.44 \times FTA - OREB + TOV\]
+Use the box.rds to calculate the POSS factor for each team and list the 3 teams with higher possesion values in each conference. Create a version creating intermediate variables in each step and another version using the pipe opeartor %&amp;gt;%.</description>
+    </item>
+    
+    <item>
+      <title>Session 4</title>
+      <link>https://r4ds-sports.netlify.app/2023/10/11/session-4/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/10/11/session-4/</guid>
+      <description>   fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab 3 Use the rushing dataset to compare the number of rushing attempts for players in different positions. Create a column called rushing_attempts_average and calculate the mean grouping by position.
+Create a project with a script called attempts.R that prints a table to the console with the average numbers of attempts per game.
  </description>
     </item>
     
     <item>
-      <title>Sobre este sitio</title>
-      <link>https://econ.rlabuonora.com/sobre/</link>
+      <title>Session 3</title>
+      <link>https://r4ds-sports.netlify.app/2023/09/28/session-3/</link>
+      <pubDate>Thu, 28 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/09/28/session-3/</guid>
+      <description>fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Download this R data file and create a plot to understand the relationship between assits and turnovers in the 82 games of the 2017/2018 regular season.
+Your job: Think about the data object. What kind of object if is? Use glimpse to find out how many variables and observations the object contains.
+ Think about the aesthetic mappings you want to create. How would you show how the Playoff variable affects that relationship?</description>
+    </item>
+    
+    <item>
+      <title>Session 2</title>
+      <link>https://r4ds-sports.netlify.app/2023/09/26/session2/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/09/26/session2/</guid>
+      <description>fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab 2 Exercise 1 Download this dataset. It has rushing stats from the 2019 NFL regular season.
+Your job:  Create a new data frame with the rushing stats only for the Quarterbacks. Create a new data.frame with a new column, rush_attempts_per_game. Use the formula rush_att/games_played. Create a new data.frame with only the following columns: name, team, and rush_attempts_per_game.    Exercise 2 Use the NBA dataset to answer the following questions:</description>
+    </item>
+    
+    <item>
+      <title>Session 1</title>
+      <link>https://r4ds-sports.netlify.app/2023/09/20/session1/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://r4ds-sports.netlify.app/2023/09/20/session1/</guid>
+      <description>.twitter-tweet { margin-left: auto; margin-right: auto; } blockquote { margin-top: 3em; background: hsl(0deg 0% 90%); padding: 16px 20px; border-radius: 8px; font-style: italic; } blockquote p::before { content: &#39;“&#39;; } blockquote p::after { content: &#39;”&#39;; }   fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Lab 1 Download this R script, the Box Score Data Frame and the Playoff Data Frame.
+The script opens the two rds files with data from NBA teams, merges on the Team column and calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://r4ds-sports.netlify.app/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://econ.rlabuonora.com/sobre/</guid>
-      <description>Este sitio fue creado con hugo-kiera en blogdown. El ícono de oferta y demanda es de Andrew Heiss.</description>
+      <guid>https://r4ds-sports.netlify.app/about/</guid>
+      <description>This is the website for R for Data Science with Sports Applications, by Rafael La Buonora.</description>
     </item>
     
   </channel>

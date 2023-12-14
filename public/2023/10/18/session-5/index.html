@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.92.2" />
+
+
+<title>Session 5 - R for Data Science With Sports Applications</title>
+<meta property="og:title" content="Session 5 - R for Data Science With Sports Applications">
+
+
+  <link href='https://r4ds-sports.netlify.app/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo_econ.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/rlabuonora">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rlabuonora">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">Session 5</h1>
+
+    
+    <span class="article-date">2023-10-18</span>
+    
+
+    <div class="article-content">
+      
+<script src="https://r4ds-sports.netlify.app/2023/10/18/session-5/index_files/fitvids/fitvids.min.js"></script>
+
+
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="https://r4ds-sports-session5.netlify.app/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+<div id="lab" class="section level2">
+<h2>Lab</h2>
+<ol style="list-style-type: decimal">
+<li><p>Rewrite <a href="./script.R">this R script from session 1</a> to use the pipe operator.</p></li>
+<li><p>Possesions are calculated with this equation (Kubatko 2007):</p></li>
+</ol>
+<p><span class="math display">\[POSS = P2A + P3A + 0.44 \times FTA - OREB + TOV\]</span></p>
+<p>Use the <a href="./box.rds">box.rds</a> to calculate the POSS factor for each team and list the 3 teams with higher possesion values in each conference. Create a version creating intermediate variables in each step and another version using the pipe opeartor <code>%&gt;%</code>. Compare both approaches.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Create an Rmarkdown document. The document should open <a href="./add.rds">add.rds</a> and <a href="./box.rds">box.rds</a>. Join the two files by the <code>team</code> variable and create one table per conference with the teams that made the playoffs. The final document should look like <a href="./solution.docx">this</a></li>
+</ol>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

@@ -10,7 +10,7 @@
 <meta property="og:title" content="Session 1 - R for Data Science With Sports Applications">
 
 
-  <link href='https://econ.rlabuonora.com/favicon.ico' rel='icon' type='image/x-icon'/>
+  <link href='https://r4ds-sports.netlify.app/favicon.ico' rel='icon' type='image/x-icon'/>
 
 
 
@@ -41,7 +41,7 @@
 
   <ul class="nav-links">
     
-    <li><a href="/sobre/">Sobre</a></li>
+    <li><a href="/about/">About</a></li>
     
     <li><a href="https://github.com/rlabuonora">GitHub</a></li>
     
@@ -68,7 +68,7 @@
 
     <div class="article-content">
       
-<script src="https://econ.rlabuonora.com/2023/09/20/session1/index_files/fitvids/fitvids.min.js"></script>
+<script src="https://r4ds-sports.netlify.app/2023/09/20/session1/index_files/fitvids/fitvids.min.js"></script>
 
 
 <style type="text/css">
@@ -94,12 +94,22 @@ blockquote p::after {
   }
 </style>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="https://r4ds-sports-sesson1.netlify.app/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<iframe src="https://r4ds-sports-session1.netlify.app/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
 <div id="lab-1" class="section level2">
 <h2>Lab 1</h2>
-<p>Materials for Lab 1.</p>
+<p>Download <a href="./lab1.R">this R script</a>, the <a href="./box.rds">Box Score Data Frame</a> and the <a href="./add.rds">Playoff Data Frame</a>.</p>
+<p>The script opens the two rds files with data from NBA teams, merges on the <code>Team</code> column and calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not. Finally, it creates an <code>html</code> table with the results.</p>
+<div id="your-job" class="section level3">
+<h3>Your job:</h3>
+<ol style="list-style-type: decimal">
+<li><p>Open the script file in RStudio and run it. Make sure that it works correctly. Do Playoff teams have more points on average?</p></li>
+<li><p>What functions does it use? What objects does it create?</p></li>
+<li><p>Can you identify which tasks each function supports (import, wrangling, model, communication)?</p></li>
+<li><p>How many rows does the <code>df</code> data frame have? Which are the columns? Use the <code>str</code> function to print information in the console.</p></li>
+</ol>
+</div>
 </div>
 
     </div>
