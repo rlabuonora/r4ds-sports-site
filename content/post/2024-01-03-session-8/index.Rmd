@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 
 library(tidyverse)
 library(kableExtra)
+library(ggplot2)
 
 options(kableExtra.html.bsTable = TRUE)
 
@@ -39,7 +40,20 @@ xaringanExtra::embed_xaringan(
 
 ## Lab
 
-1) Use [this dataset](./win_probs.rds) to create an Rmarkdown document that analyzes the win probilities for each team during the course of the game. Create a plot and include it in the file (either by inserting the `ggplot` code in an R chunk or by importing the image directly.
-Use bold type to explain football concepts, bullet points to explain the main takeaways of the plot. Also add a label caption to credit the data source (`espnscrapeR` package) to the plot.
+1) Use this dataset to recreate this plot:
 
-2) Use [this dataset](./diff_df.rds) to recreate the Points Differential vs. Win Percent, apply it them `ggthemes::theme_fivethirtyeight()` theme and center the plot title and subtitle.
+```{r echo=FALSE}
+
+ggplot(mtcars) + geom_point(aes(mpg, cyl))
+
+```
+
+- 
+- 
+
+2) Use this dataset to recreate this plot: 
+
+```{r}
+
+```
+
