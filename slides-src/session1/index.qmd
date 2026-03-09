@@ -1,0 +1,265 @@
+---
+title: "R for Data Science"
+subtitle: "With Sports Applications"
+date: "2023-09-20"
+format:
+  revealjs:
+    theme: default
+    css: ../_styles/slides.css
+    title-slide: false
+    slide-number: true
+    width: 1600
+    height: 900
+execute:
+  warning: false
+  message: false
+  cache: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, echo=TRUE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+
+## Course Philosophy
+
+- Hands on
+
+- Strong Fundamentals: run before you fly
+
+- Relevance to your job
+
+
+
+
+##
+
+::: {.pull-left}
+![](./imgs/cover.jpeg)
+:::
+
+::: {.pull-right}
+- Leading introductory textbook by Hadley Wickham and coauthors.
+
+- [Available online for free](https://r4ds.hadley.nz/)
+
+- Examples from books and blogs.
+:::
+
+## Data Scientists task
+
+::: {.center}
+![A wide image with a diagram of branching in git.](./imgs/data-science.png)
+:::
+
+## Data Import
+
+- Excel, text files.
+
+- Databases
+
+- Internet: APIS, data scraping
+
+- Devices (GPS, Imaging, etc.)
+
+
+## Data Wrangling
+
+> 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu and Johnson 2003)
+
+
+## Modeling
+
+- Stats stuff
+
+
+## Visualize
+
+- Exploratory, interactive visualization.
+
+
+## Communicate
+
+- Communicating your findings effectively to stakeholders is crucial for success of data science.
+
+- R supports multiple ways of presenting your results: blogs, written documents, data visualization and interactive applications.
+
+
+## Documents
+ 
+[Informe URSEC](https://www.gub.uy/unidad-reguladora-servicios-comunicaciones/datos-y-estadisticas/estadisticas/informes-mercado-del-sector-telecomunicaciones)
+
+## Slide Decks
+
+- This one!
+
+## Blogs
+
+- http://sportstatisticsrsweet.rbind.io/
+
+- https://www.mitchhenderson.org/
+
+
+## Visualization (1) {background-image="url('./imgs/legs.png')" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+<div class="footer-note">From [sportstatisticsrsweet.rbind.io]()</div>
+
+
+## Visualization (2) {background-image="url('./imgs/left_vs_right.png')" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+<div class="footer-note">[Mitch Henderson](https://www.mitchhenderson.org/)</div>
+
+
+## Visualization (3) {background-image="url('./imgs/heat_map.png')" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+<div class="footer-note">Basketball Data Science: With Applications in R</div>
+
+
+
+
+## Themes
+- [Use theming to adhere to styleguides] (https://bbc.github.io/rcookbook/)
+
+## Interactive applications
+
+https://shiny-eio.upc.edu/pubs/sport-R-packages/
+
+## Open Source, reproducibility, et all
+
+- R's strength is its community
+
+- Workshops, blogs, Journals, etc.
+
+
+## Getting started {.inverse .center .middle}
+
+
+## R & RStudio
+
+::: {.pull-left}
+![R & RStudio](./imgs/r_rstudio.jpeg) 
+:::
+
+::: {.pull-right}
+- RStudio is a __computing environment__
+
+- R is a __programming language__
+:::
+## RStudio
+
+::: {.pull-left}
+![RStudio](./imgs/rstudio-panes-labeled.jpeg)
+:::
+
+::: {.pull-right}
+- You do not use a lot of the windows.
+
+- You need to use well the ones you use.
+:::
+## RStudio (2)
+
+- Working Directory
+
+- `getwd()`, `setwd()`, `list.files()`.
+
+- `install.packages()`
+
+- Sourcing scripts `.R`
+
+- Opening data files `(.rds)`
+
+## R
+
+- Functions and objects
+
+- Variables and assignment
+
+- Side effects
+
+
+## Objects
+```{r}
+x <- c(1, 2, 3)
+
+```
+
+## Objects (2) The Data Frame
+
+
+::: {.pull-left}
+- Similar to an Excel spreadsheet (?)
+
+- It has rows and columns
+
+- Each row is an observation
+
+- Each column is a feature of the data
+:::
+
+
+::: {.pull-right}
+```{r}
+mtcars
+```
+:::
+
+
+???
+
+Ask for examples of data sets.
+## Functions
+
+The take arguments and return objects and/or produce side effects.
+```{r, eval=FALSE}
+View(mtcatrs)
+```
+
+```{r}
+str(mtcars)
+```
+
+
+## Your turn {.inverse .center .middle}
+
+## Lab: a complete R script
+
+- Available on [the course website](https://r4ds-sports.netlify.app/2023/09/20/session1/)
+- Download the script (`.R`) and datasets (`.rds`).
+
+### What the script does
+
+- Opens two rds files with data from NBA teams.
+
+- Merges on the `Team` column.
+
+- Calculates the mean assits, blocks, steals for the teams that went to the playoffs and the ones that did not.
+
+- Create an `html` table with the results.
+
+
+
+## TODO
+
+- Open the html file. Do Playoff teams have more points on average?
+
+- Open the script file in RStudio and run it. Make sure that it works correctly.
+
+- What functions does it use?
+
+- Can you identify which tasks each function supports (import, wrangling, model, communication)?
+
+- What objects does it create?
+
+- How many rows does the `df` data frame have?
+
+- Which are the columns?

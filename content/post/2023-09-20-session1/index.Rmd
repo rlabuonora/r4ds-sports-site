@@ -57,7 +57,7 @@ blockquote p::after {
 
 ```{r}
 xaringanExtra::embed_xaringan(
-  url = "https://r4ds-sports-session1.netlify.app/"
+  url = "/slides/session1/"
 )
 ```
 

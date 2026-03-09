@@ -1,0 +1,223 @@
+---
+title: "R for Data Science With Sports Applications"
+date: "2023-09-26"
+format:
+  revealjs:
+    theme: default
+    css: ../_styles/slides.css
+    title-slide: false
+    slide-number: true
+    width: 1600
+    height: 900
+execute:
+  warning: false
+  message: false
+  cache: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+
+
+## Recap
+
+- From Lab 1: it is important to keep track of where files are located in your computer.
+
+- Your hard drive is organized in _folders_ or _directories_.
+
+- In Mac os, `~/Desktop` is your desktop. 
+
+- If you have a directory called lab 1 in your desktop, `~/Desktop/lab1` is the location of that folder.
+
+- Run `setwd("~/Desktop/lab1")` to make that the working directory.
+
+- `list.files()` prints the contents of the working directory in your console.
+
+
+## Recap 2
+
+- R code is organized in functions.
+
+- Functions take arguments and return values.
+
+- Data is stored in objects.
+
+- Assignment (`<-`) makes variables point to objects.
+
+## Recap 3
+
+```{r}
+x <- c(1, 2, 3)
+mean(x)
+```
+
+```{r}
+str(mtcars)
+```
+
+## Data frame
+
+- The most important kind of object in R.
+
+```{r}
+## NBA championship 2017/2018 82 regular season games
+df <- readRDS('./nba.rds')
+```
+
+## Inspect df
+```{r}
+df
+```
+
+##
+
+```{r}
+library(dplyr)
+glimpse(df)
+```
+
+## Dplyr verbs
+
+Key functions. Take a `data.frame` as input and return a `data.frame`. 
+
+
+- `filter`
+- `select`
+- `mutate`
+- `group_by`
+- `summarize`
+- `arrange`
+
+## Filter
+
+Filter rows from the `data.frame`.
+
+```{r}
+playoff_teams <- filter(df, Playoff=='Y')
+glimpse(playoff_teams)
+```
+
+Return another data frame with the rows where the second argument is `TRUE`.
+
+## Select
+
+Remove columns from the data frame
+
+```{r}
+df_2 <- select(df, Team, Playoff, W, L)
+glimpse(df_2)
+```
+
+## Mutate
+
+::: {.pull-left}
+
+Return a new data frame with a new column:
+```{r}
+df_rebs <- mutate(df, REB=OREB+DREB)
+glimpse(df_rebs)
+```
+:::
+::: {.pull-right}
+The first argument is a `data.frame`. The rest of the arguments is one or more `expressions`. You can use formulas and mathematical operators (`-`, `+`, `*`, `/`) in those expressions.
+
+:::
+
+## Group By
+
+- Returns a __grouped__ data frame.
+- Does nothing to the data, but subsequent functions behave differently (`summarize`).
+
+```{r}
+df_grouped <- group_by(df, Playoff)
+```
+
+
+## Summarize
+
+Returns a data frame with a summary of the argument. It will have one row per group in the argument data frame.
+
+```{r}
+tbl <- summarize(df_grouped, avg_pts=mean(PTS))
+```
+
+Like mutate, you need to pass one or more expression, that will be applied to each group in the data. 
+## Arrange
+
+- Sorts the `data.frame`
+- The arguments are the columns used for sorting. 
+- Use a minus sign before the argument to sort in descending order (ascending is the default)
+
+## Arrange
+
+- Get the top 5 ranked teams
+```{r}
+sorted_df <- arrange(df, Rank)
+head(sorted_df, 5)
+```
+
+- Multiple arguments break ties
+- How would you print only the name of the teams?
+
+
+## Count
+
+- Count how many observations for each value of the variable.
+- No arguments counts all the rows
+- If we pass arguments, counts grouping with the variable we passed.
+```{r}
+count(df)
+```
+
+- How many teams per division?
+```{r}
+count(df, Division)
+```
+## Remember object types
+
+- Different functions take different type of objects.
+
+- `df` is a `data.frame`
+- A `data.frame` is a collection of vectors
+- Vectors can be of different types
+```{r}
+glimpse(df)
+```
+
+We can access vectors inside a data frame in multiple ways. `$` operator.
+
+```{r}
+mean(df$PTS)
+```
+
+- Dplyr verbs streamline access to vectors
+
+## Mutate
+
+```{r}
+df_with_mean <- mutate(df, mean_pts=mean(PTS))
+```
+
+- Think about data types!
+
+
+<!-- ## Combine multiple dplyr verbs -->
+
+<!-- - Find the top team in each division -->
+<!-- ```{r} -->
+<!-- grouped <- group(df, Division) -->
+
+<!-- ``` -->
+

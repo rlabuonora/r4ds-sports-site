@@ -1,0 +1,30 @@
+---
+title: "ND vs CLEMSON Postgame Report"
+output: word_document
+date: "2023-12-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Notre Dame 31-23 Loss to Clemson
+
+The following is a football analytics report of the Notre Dame vs Clemson Game.
+Some Football Analytics terms should be understood before viewing. They are described
+below:
+
+**EPA (Expected Points Added)** is a measure of offensive efficiency and explosiveness. Before each play, a model predicts the expected Points (EP1) that a team will score on a drive based on down, distance, field position, etc.
+After the play occurs, a new Expected Points value (EP2) is calculated before the following play. The difference between these Expected Points values is the EPA for the original play (EPA = EP2 - EP1).
+
+This is a list.
+
+  - First element
+  - Second element
+  
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(cyl, disp)) + geom_point()
+```
+

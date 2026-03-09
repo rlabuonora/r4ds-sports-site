@@ -1,0 +1,19 @@
+---
+title: "FourFactors"
+output: word_document
+date: "2023-10-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Four factors
+
+```{r}
+library(BasketballAnalyzeR)
+tm <- c("BOS","CLE","GSW","HOU")
+selTeams <- which(Tadd$team %in% tm)
+FF.sel <- fourfactors(Tbox[selTeams,], Obox[selTeams,])
+plot(FF.sel)
+```
+

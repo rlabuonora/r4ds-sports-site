@@ -1,0 +1,271 @@
+---
+title: "Session 6"
+date: "2023-11-22"
+format:
+  revealjs:
+    theme: default
+    css: ../_styles/slides.css
+    title-slide: false
+    slide-number: true
+    width: 1600
+    height: 900
+execute:
+  warning: false
+  message: false
+  cache: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+library(dplyr)
+library(ggplot2)
+library(readxl)
+
+if (requireNamespace("forcats", quietly = TRUE)) {
+  library(forcats)
+} else {
+  fct_infreq <- function(f) {
+    counts <- sort(table(f), decreasing = TRUE)
+    factor(f, levels = names(counts))
+  }
+
+  fct_reorder <- function(.f, .x, .fun = median, ..., .desc = FALSE) {
+    summary_values <- tapply(.x, .f, .fun, ...)
+    levels <- names(sort(summary_values, decreasing = .desc))
+    factor(.f, levels = levels)
+  }
+}
+```
+
+
+
+## Types
+
+R has different types of objects.
+
+```{r}
+class(mtcars)
+```
+
+```{r}
+class(c(1, 2, 3))
+```
+
+```{r}
+class(c("Hello", "Goodbye"))
+```
+
+
+## Data Frames
+
+- Data frames are special type of object composed of multiple objects.
+
+```{r}
+glimpse(mpg)
+```
+
+
+## The Manufacturer column
+```{r}
+mpg %>% count(manufacturer)
+```
+
+## A new type
+
+- Factors are used to represent categorical variables
+```{r}
+mpg_2 <- mpg %>% 
+  mutate(manufacturer=as.factor(manufacturer))
+
+glimpse(mpg_2)
+```
+
+
+## Class of the vector
+
+```{r}
+class(mpg_2$manufacturer)
+```
+
+## Factors
+- Behind the scenes, each category of a factor is assigned to a numeric value.
+- The levels 
+
+```{r}
+levels(mpg_2$manufacturer)
+```
+
+- In this case, audi is 1, chevrolet 2, etc.
+- The order of the levels is this codification.
+- It is separate from the order in which the data frame is arranged.
+
+
+## Forcats
+
+- This package has functions to change the order of a factor. Think carefully about what you want.
+
+- `fct_inorder()`: by the order in which they first appear.
+ 
+- In this case, the alphabetical order is the same as the order in which they appear in the data. This might not be true.
+
+
+
+## fct_infreq
+
+- `fct_infreq()`: by number of observations with each level (largest first)
+
+```{r}
+
+mpg_3 <- mpg %>% 
+  mutate(manufacturer=fct_infreq(manufacturer))
+levels(mpg_3$manufacturer)
+
+```
+
+
+
+## Example
+
+- In the NBA data, `Team`, `Playoff`, `Conference` and `Division` are factors.
+
+```{r}
+nba <- readRDS('./nba.rds')
+glimpse(nba)
+```
+
+
+
+## Visualization
+
+- Create a barchart of the number of 3 Pts attempts for the season. Add color to the bars to show if each team made the playoffs. 
+
+
+##
+
+```{r}
+ggplot(data=nba, mapping=aes(Team, P3A)) +
+  geom_col()
+```
+
+
+## Example (2)
+
+Flipping coordinates is useful to show the labels of the Teams.
+```{r}
+ggplot(nba, aes(Team, P3A)) +
+  geom_col() + 
+  coord_flip()
+```
+
+## Order the factor
+
+- `fct_reorder` Reorders the factor by another variable.
+
+```{r}
+nba %>% 
+  mutate(Team=fct_reorder(Team, P3A)) %>% 
+  ggplot(aes(Team, P3A, fill=Playoff)) +
+  geom_col() +
+  coord_flip()
+```
+
+## Function arguments and defaults
+
+- You can pass arguments with or without names to functions
+
+```{r}
+nba_data <- nba %>% 
+  mutate(Team=fct_reorder(Team, P3A)) 
+
+ggplot(data=nba_data, mapping=aes(x=Team, y=P3A, fill=Playoff)) +
+  geom_col() +
+  coord_flip()
+
+ggplot(nba, aes(P2A,P3A)) + geom_point()
+```
+
+
+## Time series plots
+
+```{r}
+
+df <- read_excel('./mpd2018.xlsx', sheet = 'Full data')
+
+df_uy_usa <- df %>% 
+  filter(country %in% c("Uruguay", "United States"))
+
+
+plt <- df_uy_usa %>% 
+  filter(year>1800) %>% 
+  ggplot(aes(year, cgdppc)) + 
+  geom_line(aes(group=country, color=country)) +
+  scale_color_discrete("") +
+  labs(title="USA leaves Uruguay behind",
+       subtitle="Income gap widened last century",
+       x="Year",
+       y="Per Capita GDP") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+  
+
+```
+
+##
+
+```{r}
+plt
+```
+
+## Facets
+
+- Facets allow us to see different subsets of our data in different panes.
+
+
+## Facets {background-image="url('./imgs/left_vs_right.png')" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+<div class="footer-note">[Mitch Henderson](https://www.mitchhenderson.org/)</div>
+
+
+
+## Facets in ggplot
+
+- If we add a facetting layer to our ggplot, we get one pane for each subset of our _facetting variable_.
+
+```{r}
+xw_long <- readRDS('./xw_long.rds')
+glimpse(xw_long)
+```
+
+
+## Facets
+
+```{r}
+stats_plot <- xw_long %>% 
+  filter(stat %in% c("STL","BLK","DREB")) %>% 
+  ggplot(aes(x=team, y=value, fill=stat)) +
+  geom_col() + 
+  coord_flip() +
+  facet_grid(~stat)
+```
+
+
+
+##
+
+```{r echo=FALSE}
+stats_plot
+```
+
+
+## Scales
+

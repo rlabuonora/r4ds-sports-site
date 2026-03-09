@@ -1,0 +1,73 @@
+:root {
+  --slide-accent: #1381b0;
+  --slide-accent-2: #ff961c;
+  --slide-ink: #1f2a37;
+}
+
+.reveal {
+  font-size: 30px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--slide-accent);
+}
+
+.reveal a {
+  color: var(--slide-accent-2);
+}
+
+.reveal pre code {
+  font-size: 0.8em;
+}
+
+.reveal .slide-number {
+  color: var(--slide-accent);
+}
+
+.reveal .pull-left,
+.reveal .pull-right {
+  float: left;
+  width: 48%;
+}
+
+.reveal .pull-right {
+  float: right;
+}
+
+.reveal .pull-left > :last-child,
+.reveal .pull-right > :last-child {
+  margin-bottom: 0;
+}
+
+.reveal .footer-note {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1rem;
+  font-size: 0.55em;
+  color: #555;
+}
+
+.reveal section.inverse {
+  background: var(--slide-accent);
+  color: #fff;
+}
+
+.reveal section.inverse h1,
+.reveal section.inverse h2,
+.reveal section.inverse h3,
+.reveal section.inverse a,
+.reveal section.inverse .slide-number {
+  color: #fff;
+}
+
+.reveal section.center {
+  text-align: center;
+}
+
+.reveal section.middle {
+  top: 50% !important;
+}
+

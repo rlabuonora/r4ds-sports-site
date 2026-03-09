@@ -32,7 +32,7 @@ celeste <- "#5e81ac"
 
 ```{r}
 xaringanExtra::embed_xaringan(
-  url = "https://r4ds-sports-session7.netlify.app/"
+  url = "/slides/session7/"
 )
 ```
 
